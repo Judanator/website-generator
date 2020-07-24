@@ -1,12 +1,41 @@
-.logo {
-    position: absolute;
-    width: 5%;
-    margin: 1% 0 0 1%
+.website-gif {
+  position: absolute;
+  width: 30%;
+  top: 20%;
+  left: 60%;
 }
 
-.website-gif {
-    position: absolute;
-    width: 30%;
-    top: 20%;
-    left: 55%;
+.homepage-title {
+  position: absolute;
+  font-size: 65px;
+  text-align: center;
+  left: 17%;
+  top: 30%;
+  font-weight: 900;
+  color: #0c2444;
 }
+
+.homepage-subtext1 {
+  position: absolute;
+  left: 14.5%;
+  top: 50.5%;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.slider {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+section {
+	padding: 1rem;
+	/* width: 100vw; */
+	min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+	text-align: center;
+	position: relative;
+}
+

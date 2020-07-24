@@ -1,0 +1,11 @@
+.arrow {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  border: solid #0c2444;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 10px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+}

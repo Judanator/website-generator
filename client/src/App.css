@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
   height: 100vh;
-  overflow: hidden;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
+  box-sizing: border-box;
 }
 
+body {
+	overflow-x: hidden;
+}
