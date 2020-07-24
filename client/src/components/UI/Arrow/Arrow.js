@@ -1,12 +1,8 @@
-import React from 'react'
-import './Arrow.css'
+import React from "react";
+import "./Arrow.css";
 
 const Arrow = () => {
-    return (
-        <div className="arrowDiv">
-            <div className="arrow"></div>
-        </div>
-    )
-}
+  return <div className="arrow"></div>;
+};
 
-export default Arrow
+export default Arrow;

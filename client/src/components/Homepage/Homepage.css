@@ -10,7 +10,7 @@
   font-size: 65px;
   text-align: center;
   left: 17%;
-  top: 30%;
+  top: 26%;
   font-weight: 900;
   color: #0c2444;
 }
@@ -18,9 +18,60 @@
 .homepage-subtext1 {
   position: absolute;
   left: 14.5%;
-  top: 50.5%;
+  top: 46%;
   font-size: 22px;
   font-weight: 500;
+}
+
+.getstartedBtn {
+  width: 330px;
+  height: 60px;
+  background: #0c2444;
+  border: 6px solid #ffde59;
+  font-family: "Spartan", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  z-index: 0;
+  top: 55%;
+  left: 26%;
+  animation-name: moveInLeft;
+  animation-timing-function: ease-out;
+  color: white;
+  animation-duration: 2s;
+}
+
+.getstartedBtn::before,
+.getstartedBtn::after {
+  position: absolute;
+  background: #0c2444;
+  z-index: -1;
+  transition: 1s;
+  content: "";
+}
+
+.getstartedBtn::before {
+  height: 60px;
+  width: 120px;
+}
+
+.getstartedBtn::after {
+  width: 250px;
+  height: 60px;
+}
+
+.getstartedBtn:hover::before {
+  width: 0px;
+  background: #0c2444;
+}
+
+.getstartedBtn:hover::after  {
+  height: 0px;
+  background: #0c2444;
 }
 
 .slider {
@@ -31,7 +82,6 @@
 
 section {
 	padding: 1rem;
-	/* width: 100vw; */
 	min-height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: normal;
@@ -39,3 +89,52 @@ section {
 	position: relative;
 }
 
+.processText {
+  font-size: 70px;
+  position: absolute;
+  font-weight: 800;
+  top: 12%;
+  left: 37%;
+  color: #0c2444;
+}
+
+.processLine{
+  position: absolute;
+  top: 22%;
+  left: 42%;
+  width: 15%;
+  height: 5px;
+  background: #0c2444;
+  border: none;
+}
+
+.processDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 20%;
+}
+
+.processDiv h2{
+  font-size: 170px;
+  color: #0c2444;
+  font-weight: 900;
+  margin-left: -60%;
+  color: dar
+}
+
+.processDiv h2 p{
+  display: inline-flex;
+  font-size: 19px;
+  color: #0c2444;
+  position: absolute;
+  font-weight: 600;
+  text-align: left;
+  line-height: 30px;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
