@@ -22,9 +22,12 @@ const Homepage = () => {
           </div>
         </section>
 
-        <section className="section3">
-          <h2>testing</h2>
-        </section>
+        {/* <section style={{background: "salmon"}} className="section3">
+          <h2 className="footerTitleText"> Start Your Company Today! </h2>
+          <div className="footer">
+            <p> Website made by Judy Tan. <a href="https://github.com/Judanator"> Visit my <span style={{color: "yellow", fontWeight: "600"}}> github! </span> </a></p>
+          </div>
+        </section> */}
     </div>
   );
 };

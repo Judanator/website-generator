@@ -132,6 +132,37 @@ section {
   line-height: 30px;
 }
 
+.footerTitleText {
+  font-size: 70px;
+  position: absolute;
+  font-weight: 800;
+  top: 12%;
+  left: 21%;
+  color: #0c2444;
+}
+
+.section3 {
+  height: 80%;
+}
+
+.footer {
+  height: 5%;
+  background: #0c2444!important;
+  margin-top: 47%;
+}
+
+.footer p {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.footer p a {
+  text-decoration: none;
+  color: white
+}
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
