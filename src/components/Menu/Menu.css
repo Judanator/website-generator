@@ -1,0 +1,23 @@
+.menuDiv {
+  height: 7%;
+  background: #ffde59;
+  width: 99.2%;
+}
+
+.logo {
+  width: 45%;
+  left: 1.5%;
+  top: 30%;
+}
+
+.navbar-nav {
+  width: 60%;
+  float: right!important;
+}
+
+.navbar-nav a {
+  margin: 1% 0 0 10%;
+  font-weight: 600;
+  color: #0c2444!important;
+  font-size: 18px;
+}

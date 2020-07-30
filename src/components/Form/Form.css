@@ -1,0 +1,75 @@
+input::placeholder {
+  font-size: 18px;
+  font-family: "Spartan", sans-serif;
+  font-weight: 500;
+  color: #9b9393;
+}
+
+.formDiv {
+  background: #0c2444;
+  width: 98.5vw;
+  height: 100vh;
+  /* position: relative; */
+}
+
+.formTitle {
+  font-size: 60px;
+  position: absolute;
+  font-weight: 900;
+  color: white;
+  left: 23%;
+}
+
+.formLabel {
+  position: absolute;
+  color: white;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.formInput {
+  padding: 0.8%;
+  background: #ffde59;
+  width: 35%;
+  position: absolute;
+}
+
+.companyNameLabel {
+  left: 8%;
+  top: 30%;
+}
+
+.companyNameInput {
+  top: 38%;
+  left: 8%;
+}
+
+.companyDomainLabel {
+  left: 55%;
+  top: 30%;
+}
+
+.companyDomainInput {
+  top: 38%;
+  left: 55%;
+}
+
+.companyPhoneLabel {
+  left: 8%;
+  top: 50%;
+}
+
+.companyPhoneInput {
+  top: 58%;
+  left: 8%;
+}
+
+.companyIndustryLabel {
+  left: 55%;
+  top: 50%;
+}
+
+.companyIndustryInput {
+  top: 58%;
+  left: 55%;
+}

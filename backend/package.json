@@ -2,9 +2,13 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "start": "concurrently \"npm run server\" \"cd .. && npm start\""
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +18,6 @@
     "config": "^3.3.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongodb": "^3.5.9"
+    "mongoose": "^5.9.25"
   }
 }

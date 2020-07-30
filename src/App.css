@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 100vh;
+  font-family: "Spartan", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+.container {
+  margin: 5%;
+}
