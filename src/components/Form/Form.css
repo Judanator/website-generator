@@ -1,15 +1,20 @@
-input::placeholder {
-  font-size: 18px;
+input::placeholder,
+textarea::placeholder,
+option::placeholder {
+  font-size: 17px;
   font-family: "Spartan", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   color: #9b9393;
+}
+
+.form-group {
+  margin-bottom: 0;
 }
 
 .formDiv {
   background: #0c2444;
   width: 98.5vw;
-  height: 100vh;
-  /* position: relative; */
+  height: 100%;
 }
 
 .formTitle {
@@ -18,17 +23,17 @@ input::placeholder {
   font-weight: 900;
   color: white;
   left: 23%;
+  top: 5%;
 }
 
 .formLabel {
   position: absolute;
   color: white;
-  font-size: 23px;
+  font-size: 22px;
   font-weight: 600;
 }
 
 .formInput {
-  padding: 0.8%;
   background: #ffde59;
   width: 35%;
   position: absolute;
@@ -36,7 +41,7 @@ input::placeholder {
 
 .companyNameLabel {
   left: 8%;
-  top: 30%;
+  top: 32%;
 }
 
 .companyNameInput {
@@ -46,7 +51,7 @@ input::placeholder {
 
 .companyDomainLabel {
   left: 55%;
-  top: 30%;
+  top: 32%;
 }
 
 .companyDomainInput {
@@ -56,7 +61,7 @@ input::placeholder {
 
 .companyPhoneLabel {
   left: 8%;
-  top: 50%;
+  top: 52%;
 }
 
 .companyPhoneInput {
@@ -66,10 +71,31 @@ input::placeholder {
 
 .companyIndustryLabel {
   left: 55%;
-  top: 50%;
+  top: 52%;
 }
 
 .companyIndustryInput {
   top: 58%;
   left: 55%;
+}
+
+.companyMissionLabel {
+  left: 8%;
+  top: 72%;
+}
+
+.companyMissionInput {
+  top: 78%;
+  left: 8%;
+  width: 82%;
+}
+
+.form-submitBtn {
+  position: absolute;
+  top: 94%;
+  left: 8%;
+  width: 10%;
+  font-size: 18px;
+  background: salmon;
+  color: #0c2444;
 }
