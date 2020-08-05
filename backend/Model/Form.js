@@ -18,7 +18,7 @@ const formSchema = new Schema({
         type: String,
         required: true
     },
-    businessStatement: {
+    businesMission: {
         type: String,
         required: true
     }

@@ -1,0 +1,26 @@
+.login {
+  position: relative;
+  margin: 12%;
+}
+
+.loginTitle {
+  font-size: 60px;
+  position: absolute;
+  font-weight: 900;
+  color: #0c2444;
+  top: -70%;
+  left: 35%;
+}
+
+.loginForm {
+  margin-top: 2%;
+}
+
+.login-submitBtn {
+  position: absolute;
+  top: 115%;
+  width: 10%;
+  height: 25%;
+  font-size: 18px;
+  color: #0c2444;
+}

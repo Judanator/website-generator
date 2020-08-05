@@ -12,7 +12,6 @@ option::placeholder {
 }
 
 .formDiv {
-  background: #0c2444;
   width: 98.5vw;
   height: 100%;
 }
@@ -21,14 +20,14 @@ option::placeholder {
   font-size: 60px;
   position: absolute;
   font-weight: 900;
-  color: white;
-  left: 23%;
-  top: 5%;
+  color: #0c2444;
+  left: 25%;
+  top: 7%;
 }
 
 .formLabel {
   position: absolute;
-  color: white;
+  color: #0c2444;
   font-size: 22px;
   font-weight: 600;
 }
@@ -36,6 +35,7 @@ option::placeholder {
 .formInput {
   background: #ffde59;
   width: 35%;
+  height: 5%;
   position: absolute;
 }
 
@@ -92,10 +92,10 @@ option::placeholder {
 
 .form-submitBtn {
   position: absolute;
-  top: 94%;
+  top: 93%;
   left: 8%;
   width: 10%;
+  height: 6%;
   font-size: 18px;
-  background: salmon;
   color: #0c2444;
 }

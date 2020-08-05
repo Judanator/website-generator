@@ -5,7 +5,6 @@ import "./Menu.css";
 
 const Menu = () => {
   return (
-    // <nav className="menuDiv">
       <Navbar expand="lg" className="menuDiv">
         <Navbar.Brand href="/">
           <img
@@ -21,10 +20,10 @@ const Menu = () => {
             <Nav.Link href="/blog" className="navItem"> blog </Nav.Link>
             <Nav.Link href="/contact" className="navItem"> contact us </Nav.Link>
             <Nav.Link href="/login" className="navItem"> login </Nav.Link>
+            <Nav.Link href="/signup" className="navItem"> signup </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-
   );
 };
 
