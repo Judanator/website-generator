@@ -18,9 +18,13 @@ const formSchema = new Schema({
         type: String,
         required: true
     },
-    businesMission: {
+    businessMission: {
         type: String,
         required: true
+    },
+    user: {
+        type: String,
+        ref: "User"
     }
 })
 

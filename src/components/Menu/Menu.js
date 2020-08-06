@@ -21,6 +21,7 @@ const Menu = () => {
             <Nav.Link href="/contact" className="navItem"> contact us </Nav.Link>
             <Nav.Link href="/login" className="navItem"> login </Nav.Link>
             <Nav.Link href="/signup" className="navItem"> signup </Nav.Link>
+            <Nav.Link href="/profile" className="navItem"> profile </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

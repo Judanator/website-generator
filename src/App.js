@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import axios from 'axios'
 import "./App.css";
 
 import Homepage from "./components/Homepage/Homepage";
@@ -9,6 +10,13 @@ import SignUp from './components/Signup/Signup'
 import Login from './components/Login/Login'
 
 function App() {
+  const [userData, setUser] = useState('')
+
+  useEffect(() => {
+    axios.get('http://localhost:3000/getSession')
+    .then(res => console.log(res))
+  })
+
   return (
     <Router>
       <div className="App">
