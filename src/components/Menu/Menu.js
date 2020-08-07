@@ -1,24 +1,24 @@
-import React, {useState, useEffect} from "react";
+import React, { useEffect, useContext} from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import axios from 'axios'
-import { withRouter } from 'react-router-dom';
-
+import { GlobalContext } from "../../Context/GlobalState";
 
 import "./Menu.css";
 
 const Menu = () => {
-  const [userData, setUser] = useState('')
+  const {getSession} = useContext(GlobalContext)
 
   useEffect(() => {
-    axios.get('http://localhost:3000/getSession')
-    .then(res => {
-      if(userData === '') {
-        setUser(res.data.user)
+    axios.get("http://localhost:3000/getSession")
+    .then((res) => {
+      const sessionData = {
+        firstName: res.data.user.firstName,
+        id: res.data.user._id,
+        email: res.data.user.email,
       }
-    })
-  })
-
-  //console.log(userData)
+      getSession(sessionData)
+    });
+  }, []);
 
   return (
       <Navbar expand="lg" className="menuDiv">
@@ -38,11 +38,11 @@ const Menu = () => {
             <Nav.Link href="/login" className="navItem"> login </Nav.Link>
             <Nav.Link href="/signup" className="navItem"> signup </Nav.Link>
             <Nav.Link href="/profile" className="navItem"> profile </Nav.Link>
+            <Nav.Link href="/foodindustry" className="navItem"> food </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
   );
 };
 
-export default withRouter(Menu);
-// export default withRouter(Menu);
+export default Menu;

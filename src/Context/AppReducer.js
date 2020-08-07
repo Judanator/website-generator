@@ -1,9 +1,9 @@
 export default (state, action) => {
   switch (action.type) {
-    case "ADD_USERDATA":
+    case "GET_SESSION":
       return {
         ...state,
-        userData: [action.payload, ...state.userData],
+        session: [action.payload, ...state.session],
       };
       default: return state
   }

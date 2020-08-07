@@ -72,5 +72,7 @@ exports.postLogout = (req, res) => {
 
 ///////////////////////      GET SESSIONS      ///////////////////////
 exports.getSession = (req, res) => {
-  res.json(req.session)
+  res.send(req.session)
 }
+
+//res.send vs res.json

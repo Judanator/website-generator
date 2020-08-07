@@ -13,6 +13,8 @@ exports.postForm = (req, res) => {
         user
     })
 
+    console.log(newForm)
+
     newForm.save()
     .then(() => console.log('Form saved complete - formcontroller.js'))
     .then(() => res.redirect('/'))

@@ -24,8 +24,8 @@ const Homepage = () => {
           <h2 id="2">2<span style={{color: 'darkcyan'}}>.</span><p className="process2"> ai will generate a website <br/>for you based on your answers. <br/> components are created based <br/> on industry. </p></h2>
           <h2 id="3">3<span style={{color: 'darkred'}}>.</span><p className="process3"> DONE! in a few minutes, you will <br/> have a website, specifically geared  <br/>towards the company you <br/> want to build. </p></h2>
           </div>
+          <Arrow />
         </section>
-        <Arrow />
 
         {/* <section style={{background: "salmon"}} className="section3">
           <h2 className="footerTitleText"> Start Your Company Today! </h2>
