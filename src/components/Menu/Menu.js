@@ -1,9 +1,25 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Navbar, Nav } from "react-bootstrap";
+import axios from 'axios'
+import { withRouter } from 'react-router-dom';
+
 
 import "./Menu.css";
 
 const Menu = () => {
+  const [userData, setUser] = useState('')
+
+  useEffect(() => {
+    axios.get('http://localhost:3000/getSession')
+    .then(res => {
+      if(userData === '') {
+        setUser(res.data.user)
+      }
+    })
+  })
+
+  //console.log(userData)
+
   return (
       <Navbar expand="lg" className="menuDiv">
         <Navbar.Brand href="/">
@@ -28,4 +44,5 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default withRouter(Menu);
+// export default withRouter(Menu);

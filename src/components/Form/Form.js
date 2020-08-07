@@ -1,9 +1,37 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Form, FormLabel, Button } from "react-bootstrap";
+import axios from 'axios'
+
+// import{GlobalContext} from '../../Context/GlobalState'
 
 import "./Form.css";
 
 const BusinessForm = (props) => {
+  const [userData, setUser] = useState("");
+
+  useEffect(() => {
+    axios.get("http://localhost:3000/getSession").then((res) => {
+      if (userData === "") {
+        setUser(res.data.user);
+      }
+    });
+  });  // const [companyName, setCompanyName] = useState("")
+  // const [companyDomain, setcompanyDomain] = useState("")
+  // const [phoneNumber, setphoneNumber] = useState(0)
+  // const [companyIndustry, setcompanyIndustry] = useState("")
+  // const [companyStatement, setcompanyStatement] = useState("")
+
+  // const {addForm} = useContext(GlobalContext)
+
+  // const onSubmit = e => {
+  //   e.preventDefault();
+
+  // }
+
+  // const {isLoggedIn, userData} = useContext(GlobalContext);
+
+  // console.log(isLoggedIn, userData)
+  console.log(userData)
   return (
     <div className="formDiv">
       <h1 className="container formTitle"> Let's Build Your Website! </h1>
@@ -38,7 +66,7 @@ const BusinessForm = (props) => {
           </FormLabel>
           <Form.Control
             className="formInput companyPhoneInput"
-            type="text"
+            type="number"
             placeholder="phone number"
             name="phoneNumber"
           />
@@ -75,10 +103,7 @@ const BusinessForm = (props) => {
           />
         </Form.Group>
 
-        <input
-          type="hidden"
-          // value={props.location.state.userData.username}
-          name="user"></input>
+        <input type="hidden" value={userData._id} name="user"></input>
 
         <Button
           className="form-submitBtn"

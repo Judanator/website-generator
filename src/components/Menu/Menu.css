@@ -11,13 +11,12 @@
 }
 
 .navbar-nav {
-  width: 60%;
-  float: right!important;
+  width: 100%;
 }
 
-.navbar-nav a {
-  margin: 1% 0 0 10%;
-  font-weight: 600;
+.navItem {
+  margin: 1% 0 0 5%;
+  font-weight: 500;
   color: #0c2444!important;
   font-size: 18px;
 }

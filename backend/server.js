@@ -30,6 +30,15 @@ app.use(express.json({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors())
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  );
+  next();
+});
+
 // middleware for session
 app.use(session({
   secret: 'website',
@@ -46,7 +55,7 @@ app.use((req, res, next) => {
 
   User.findById(req.session.user._id)
   .then((user) => {
-    console.log('server.js - req.session')
+    // console.log('server.js - req.session')
     req.user = user;
     next()
   })
