@@ -58,6 +58,9 @@ const BusinessForm = () => {
       case "food":
         window.location = "/foodIndustry";
         break;
+      case "business":
+        window.location = "/businessIndustry";
+        break;
       default:
         window.location = "/";
     }

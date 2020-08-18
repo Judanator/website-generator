@@ -1,13 +1,16 @@
-.foodMenuDiv {
-    width: 100%;
-    margin: 5% 0 0 13%;
-}
-
-.foodRow {
-    width: 100%;
-
-}
-
 .foodMenu {
-    width: 50%;
+    width: 90%;
+    margin: 10% 0 0 0;
+}
+
+.breakfast:hover{
+    filter: grayscale(150%);
+}
+
+.lunch:hover{
+    filter: grayscale(150%);
+}
+
+.dinner:hover{
+    filter: grayscale(150%);
 }
