@@ -1,11 +1,15 @@
-import React from "react";
+import React, {Fragment} from "react";
 import './Homepage.css'
 
 import Arrow from '../UI/Arrow/Arrow'
 import Dot from '../UI/DotMenu/DotMenu'
+import Menu from '../Menu/Menu'
+
 
 const Homepage = () => {
   return (
+    <Fragment>
+    <Menu/>
     <div className="slider">
       <Dot />
       <section className="section1">
@@ -26,14 +30,8 @@ const Homepage = () => {
           </div>
           <Arrow />
         </section>
-
-        {/* <section style={{background: "salmon"}} className="section3">
-          <h2 className="footerTitleText"> Start Your Company Today! </h2>
-          <div className="footer">
-            <p> Website made by Judy Tan. <a href="https://github.com/Judanator"> Visit my <span style={{color: "yellow", fontWeight: "600"}}> github! </span> </a></p>
-          </div>
-        </section> */}
     </div>
+    </Fragment>
   );
 };
 

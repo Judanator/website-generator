@@ -14,8 +14,9 @@ const Menu = () => {
       const sessionData = {
         firstName: res.data.user.firstName,
         id: res.data.user._id,
-        email: res.data.user.email,
+        email: res.data.user.email
       }
+
       getSession(sessionData)
     });
   }, []);

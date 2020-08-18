@@ -1,0 +1,20 @@
+.foodGif {
+  height: 110vh;
+  width: 100vw;
+  filter: brightness(80%);
+}
+
+.navbarDiv {
+  background: #0c2444;
+}
+
+.foodLogo {
+  color: white !important;
+  float: left;
+}
+
+.food-navItem {
+  color: white !important;
+  float: right !important;
+  margin: 0 0 0 10%;
+}

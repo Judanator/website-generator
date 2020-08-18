@@ -1,17 +1,74 @@
-import React, {useContext} from "react";
+import React, { useContext, useState } from "react";
+import axios from "axios";
+
 import { Form, FormLabel, Button } from "react-bootstrap";
 
-import{GlobalContext} from '../../Context/GlobalState'
+import { GlobalContext } from "../../Context/GlobalState";
+import Menu from "../Menu/Menu";
 
 import "./Form.css";
 
 const BusinessForm = () => {
-  const {session} = useContext(GlobalContext);
+  const { session } = useContext(GlobalContext);
+
+  const [businessName, setBusinessName] = useState("");
+  const [businessDomain, setBusinessDomain] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState(0);
+  const [businessType, setBusinessType] = useState("");
+  const [businessMission, setBusinessMission] = useState("");
+
+  const inputBusinessName = (event) => {
+    setBusinessName(event.target.value);
+  };
+
+  const inputBusinessDomain = (event) => {
+    setBusinessDomain(event.target.value);
+  };
+
+  const inputPhone = (event) => {
+    setPhoneNumber(event.target.value);
+  };
+
+  const inputBusinessType = (event) => {
+    setBusinessType(event.target.value);
+  };
+
+  const inputBusinessMission = (event) => {
+    setBusinessMission(event.target.value);
+  };
+
+  const submitBtn = (e) => {
+    e.preventDefault();
+
+    const newForm = {
+      businessName,
+      businessDomain,
+      phoneNumber,
+      businessType,
+      businessMission,
+      // user: props.location.state.userData.username,
+    };
+
+    axios.post("http://localhost:5000/addForm", newForm);
+    console.log("success");
+
+    let typeofbusiness = businessType
+
+    switch (typeofbusiness) {
+      case "food":
+        window.location = "/foodIndustry";
+        break;
+      default:
+        window.location = "/";
+    }
+  };
 
   return (
     <div className="formDiv">
+      <Menu />
       <h1 className="container formTitle"> Let's Build Your Website! </h1>
-      <form action="/addForm" method="POST" className="userForm">
+      {/* <form action="/addForm" method="POST" className="userForm"> */}
+      <form onSubmit={submitBtn} className="userForm">
         <Form.Group>
           <FormLabel className="formLabel companyNameLabel">
             what is your company name?
@@ -21,6 +78,7 @@ const BusinessForm = () => {
             type="text"
             placeholder="company name"
             name="businessName"
+            onChange={inputBusinessName}
           />
         </Form.Group>
 
@@ -33,6 +91,7 @@ const BusinessForm = () => {
             type="text"
             placeholder="domain name"
             name="businessDomain"
+            onChange={inputBusinessDomain}
           />
         </Form.Group>
 
@@ -45,6 +104,7 @@ const BusinessForm = () => {
             type="number"
             placeholder="phone number"
             name="phoneNumber"
+            onChange={inputPhone}
           />
         </Form.Group>
 
@@ -56,7 +116,8 @@ const BusinessForm = () => {
             name="businessType"
             as="select"
             className="my-1 mr-sm-2 formInput companyIndustryInput "
-            custom>
+            custom
+            onChange={inputBusinessType}>
             <option value="">choose industry</option>
             <option value="food"> food </option>
             <option value="fashion"> fashion/beauty </option>
@@ -76,6 +137,7 @@ const BusinessForm = () => {
             className="formInput companyMissionInput"
             placeholder="company mission statement (2-4 sentences)"
             name="businessMission"
+            onChange={inputBusinessMission}
           />
         </Form.Group>
 

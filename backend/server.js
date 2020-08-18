@@ -10,8 +10,8 @@ const cors = require('cors')
 const User = require('./Model/User')
 
 //routes
-const formRoutes = require('./Routes/form')
-const userRoutes = require('./Routes/user')
+const formRoutes = require('./Routes/formRoute')
+const userRoutes = require('./Routes/userRoute')
 
 //initialization
 const app = express()

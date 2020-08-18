@@ -5,7 +5,6 @@ import "./App.css";
 import { GlobalProvider } from "./Context/GlobalState";
 
 import Homepage from "./components/Homepage/Homepage";
-import Menu from "./components/Menu/Menu";
 import Form from "./components/Form/Form";
 import SignUp from "./components/Signup/Signup";
 import Login from "./components/Login/Login";
@@ -18,7 +17,6 @@ function App() {
     <GlobalProvider>
     <Router>
       <div className="App">
-        <Menu />
         <Switch>
           <Route path="/" exact component={Homepage}></Route>
           <Route path="/form" exact component={Form}></Route>
