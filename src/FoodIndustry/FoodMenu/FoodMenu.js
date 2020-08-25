@@ -10,7 +10,7 @@ const FoodMenu = () => {
           <Col>
             <Image
               className="foodMenu breakfast"
-              src="https://i.postimg.cc/jdnQ6SBY/breakfast.jpg"
+              src="https://i.postimg.cc/90KvT8JN/Untitled-design-1.png"
               rounded
             />
           </Col>
@@ -18,7 +18,7 @@ const FoodMenu = () => {
           <Col>
             <Image
               className="foodMenu lunch"
-              src="https://i.postimg.cc/L4gHsts9/lunch.jpg"
+              src="https://i.postimg.cc/8CLMVj2F/Untitled-design-2.png"
               rounded
             />
           </Col>
@@ -26,7 +26,7 @@ const FoodMenu = () => {
           <Col>
             <Image
               className="foodMenu dinner"
-              src="https://i.postimg.cc/L4gHsts9/lunch.jpg"
+              src="https://i.postimg.cc/8Cskh3HT/Untitled-design-3.png"
               rounded
             />
           </Col>

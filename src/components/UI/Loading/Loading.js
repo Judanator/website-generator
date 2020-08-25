@@ -1,23 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import "./Loading.css";
 
-const Loading = () => {
-  let starting = 0;
+const Loading = () => { 
+  const [counter, setCounter] = useState(0)
 
   const increment = () => {
-    if (starting > 100) {
-      starting++;
+    setCounter(counter + 20)
+
+    if(counter === 100) {
+      window.location = '/website'
     }
   };
 
-  setInterval(increment, 1000);
+  setInterval(increment, 1500);
 
   return (
     <>
       <h1 className="loadingText"> Loading... Please wait </h1>
 
-      <ProgressBar className="progressBar" now={starting} label="60%" />
+      <ProgressBar className="progressBar" now={counter} animated min={0} max={100} label={`${counter}%`} />
     </>
   );
 };
