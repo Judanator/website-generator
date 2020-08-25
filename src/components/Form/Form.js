@@ -1,21 +1,30 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import axios from "axios";
 
 import { Form, FormLabel, Button } from "react-bootstrap";
+import Loading from '../UI/Loading/Loading'
 
 import { GlobalContext } from "../../Context/GlobalState";
+
 import Menu from "../Menu/Menu";
 
 import "./Form.css";
 
 const BusinessForm = () => {
-  const { session } = useContext(GlobalContext);
+  const { session, addForm } = useContext(GlobalContext);
+  // useEffect(() => {
+  //   axios.get('http://localhost:5000/getAll')
+  //   .then(res => {
+  //     console.log(res.data[0])
+  //   })
+  // })
 
   const [businessName, setBusinessName] = useState("");
   const [businessDomain, setBusinessDomain] = useState("");
   const [phoneNumber, setPhoneNumber] = useState(0);
   const [businessType, setBusinessType] = useState("");
   const [businessMission, setBusinessMission] = useState("");
+  
 
   const inputBusinessName = (event) => {
     setBusinessName(event.target.value);
@@ -46,31 +55,33 @@ const BusinessForm = () => {
       phoneNumber,
       businessType,
       businessMission,
-      // user: props.location.state.userData.username,
+      // user: session
     };
 
     axios.post("http://localhost:5000/addForm", newForm);
-    console.log("success");
+    addForm(newForm);
 
-    let typeofbusiness = businessType
+    window.location = "/loading";
 
-    switch (typeofbusiness) {
-      case "food":
-        window.location = "/foodIndustry";
-        break;
-      case "business":
-        window.location = "/businessIndustry";
-        break;
-      default:
-        window.location = "/";
-    }
+    // let typeofbusiness = businessType;
+
+    // switch (typeofbusiness) {
+    //   case "food":
+    //     window.location = "/foodIndustry";
+    //     break;
+    //   case "business":
+    //     window.location = "/businessIndustry";
+    //     break;
+    //   default:
+    //     window.location = "/";
+    // }
   };
 
   return (
     <div className="formDiv">
       <Menu />
       <h1 className="container formTitle"> Let's Build Your Website! </h1>
-      {/* <form action="/addForm" method="POST" className="userForm"> */}
+
       <form onSubmit={submitBtn} className="userForm">
         <Form.Group>
           <FormLabel className="formLabel companyNameLabel">

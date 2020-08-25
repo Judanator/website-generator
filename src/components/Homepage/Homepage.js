@@ -5,7 +5,6 @@ import Arrow from '../UI/Arrow/Arrow'
 import Dot from '../UI/DotMenu/DotMenu'
 import Menu from '../Menu/Menu'
 
-
 const Homepage = () => {
   return (
     <Fragment>

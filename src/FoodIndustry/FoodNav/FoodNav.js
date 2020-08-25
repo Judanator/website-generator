@@ -1,20 +1,32 @@
-import React from 'react'
-import { Nav, Navbar,  } from "react-bootstrap";
+import React, { useContext } from "react";
+import { Nav, Navbar } from "react-bootstrap";
+import { GlobalContext } from "../../Context/GlobalState";
 
-import './FoodNav.css'
+import "./FoodNav.css";
 
-const FoodNav = () => {
-    return (
-        <div>
-        <Navbar className="navbarDiv" expand="lg">
-        <Navbar.Brand href="/foodIndustry" className="foodLogo">insert company name</Navbar.Brand>
+const FoodNav = (props) => {
+
+
+  return (
+    <div>
+      <Navbar className="navbarDiv" expand="lg">
+        <Navbar.Brand href="/foodIndustry" className="foodLogo">
+          {props.companyName}       </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link className="food-navItem" href="/foodIndustry">Home</Nav.Link>
-            <Nav.Link className="food-navItem" href="/foodIndustry">Menus</Nav.Link>
-            <Nav.Link className="food-navItem" href="/foodIndustry">Location</Nav.Link>
-            <Nav.Link className="food-navItem" href="/foodIndustry">Order Now</Nav.Link>
+            <Nav.Link className="food-navItem" href="/foodIndustry">
+              Home
+            </Nav.Link>
+            <Nav.Link className="food-navItem" href="/foodIndustry">
+              Menus
+            </Nav.Link>
+            <Nav.Link className="food-navItem" href="/foodIndustry">
+              Location
+            </Nav.Link>
+            <Nav.Link className="food-navItem" href="/foodIndustry">
+              Order Now
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -23,8 +35,8 @@ const FoodNav = () => {
         src="https://i.postimg.cc/cCHH0Khy/foodgif.gif"
         alt="foodgif"
       />
-      </div>
-    )
-}
+    </div>
+  );
+};
 
-export default FoodNav
+export default FoodNav;

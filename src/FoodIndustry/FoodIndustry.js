@@ -1,18 +1,27 @@
 import React from "react";
+import { GlobalProvider } from "../Context/GlobalState";
+
 import "./FoodIndustry.css";
 
 import FoodNav from "./FoodNav/FoodNav";
-import SubscribeBlock from './SubscribeBlock/SubscribeBlock'
-import FoodMenu from './FoodMenu/FoodMenu'
+import SubscribeBlock from "./SubscribeBlock/SubscribeBlock";
+import FoodDescription from './FoodDescription/FoodDescription'
+import FoodMenu from "./FoodMenu/FoodMenu";
 
-
-const FoodIndustry = () => {
+const FoodIndustry = (props) => {
   return (
-    <div className="foodDiv">
-      <FoodNav />
-      <SubscribeBlock />
-      <FoodMenu />
-    </div>
+    <GlobalProvider>
+      <div className="foodDiv">
+        <FoodNav 
+          companyName = {props.companyName}
+        />
+        <FoodDescription
+                  businessMission = {props.businessMission}
+        />
+        <SubscribeBlock />
+        <FoodMenu />
+      </div>
+    </GlobalProvider>
   );
 };
 

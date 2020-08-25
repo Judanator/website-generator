@@ -9,23 +9,28 @@ import Form from "./components/Form/Form";
 import SignUp from "./components/Signup/Signup";
 import Login from "./components/Login/Login";
 
+import Loading from "./components/UI/Loading/Loading";
+
 ///////////////////////       INDUSTRIES        //////////////////////
-import FoodIndustry from './FoodIndustry/FoodIndustry'
+import FoodIndustry from "./FoodIndustry/FoodIndustry";
+import Website from "./components/Websites/Website";
 
 function App() {
   return (
     <GlobalProvider>
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route path="/" exact component={Homepage}></Route>
-          <Route path="/form" exact component={Form}></Route>
-          <Route path="/signup" exact component={SignUp}></Route>
-          <Route path="/login" exact component={Login}></Route>
-          <Route path="/foodindustry" exact component={FoodIndustry}></Route>
-        </Switch>
-      </div>
-    </Router>
+      <Router>
+        <div className="App">
+          <Switch>
+            <Route path="/" exact component={Homepage}></Route>
+            <Route path="/form" exact component={Form}></Route>
+            <Route path="/signup" exact component={SignUp}></Route>
+            <Route path="/login" exact component={Login}></Route>
+            <Route path="/foodindustry" exact component={FoodIndustry}></Route>
+            <Route path="/loading" exact component={Loading}></Route>
+            <Route path="/website" exact component={Website}></Route>
+          </Switch>
+        </div>
+      </Router>
     </GlobalProvider>
   );
 }

@@ -1,33 +1,44 @@
-const Form = require('../Model/Form')
+const Form = require("../Model/Form");
 
 ///////////////////////      POST FORM      ///////////////////////
 exports.postForm = (req, res) => {
-    const {businessName, businessDomain, phoneNumber, businessType, businessMission, user} = req.body;
+  const {
+    businessName,
+    businessDomain,
+    phoneNumber,
+    businessType,
+    businessMission,
+    user,
+  } = req.body;
 
-    const newForm = new Form({
-        businessName, 
-        businessDomain, 
-        phoneNumber, 
-        businessType, 
-        businessMission,
-        user
-    })
+  const newForm = new Form({
+    businessName,
+    businessDomain,
+    phoneNumber,
+    businessType,
+    businessMission,
+    user,
+  });
 
-    console.log(newForm)
-
-    newForm.save()
-    .then(() => console.log('Form saved complete - formcontroller.js'))
-    .then(() => res.redirect('/website'))
-    .catch(error => console.log(error))
-}
-
+  newForm
+    .save()
+    .then(() => console.log("Form saved complete - formcontroller.js"))
+    .catch((error) => console.log(error));
+};
 
 exports.getSingleForm = (req, res) => {
-    Forum.findById(req.params.id)
-    .then(forum => {
-      res.json(forum)
+  Form.findById(req.params.id)
+    .then((res) => console.log(res))
+    .then(form => {
+      res.json(form)
     })
-    .catch(error => console.log(error))
-  }
+    .catch((error) => console.log(error));
+};
 
-
+exports.getAllForm = (req, res) => {
+  Form.find()
+    .then((form) => res.json(form))
+    .catch((error) => {
+      console.log(error);
+    });
+};
