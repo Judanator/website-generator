@@ -1,12 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
-import { GlobalContext } from "../../Context/GlobalState";
-
 import "./FoodNav.css";
 
 const FoodNav = (props) => {
-
-
   return (
     <div>
       <Navbar className="navbarDiv" expand="lg">

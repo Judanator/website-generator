@@ -1,0 +1,26 @@
+.signup {
+    position: relative;
+    margin: 12%;
+}
+
+.signupTitle {
+    font-size: 60px;
+    position: absolute;
+    font-weight: 900;
+    color: #0c2444;
+    top: -50%;
+    left: 35%;
+}
+
+.signupForm {
+    margin-top: 2%;
+}
+
+.signup-submitBtn {
+    position: absolute;
+    top: 110%;
+    width: 10%;
+    height: 16%;
+    font-size: 18px;
+    color: #0c2444;
+}
