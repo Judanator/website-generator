@@ -1,8 +1,7 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 
 import { Form, FormLabel, Button } from "react-bootstrap";
-import Loading from '../UI/Loading/Loading'
 
 import { GlobalContext } from "../../Context/GlobalState";
 

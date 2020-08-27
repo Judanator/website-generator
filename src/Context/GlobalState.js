@@ -1,6 +1,5 @@
 import React, { createContext, useReducer } from "react";
 import AppReducer from "./AppReducer";
-import FoodIndustry from "../FoodIndustry/FoodIndustry";
 
 const initialState = {
   session: "",
