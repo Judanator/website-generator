@@ -8,6 +8,7 @@ const Website = () => {
     const [phoneNumber, setPhoneNumber] = useState(0)
     const [businessMission, setBusinessMission] = useState('')
     const [businessDomain, setBusinessDomain] = useState('')
+    const [websiteID, setWebsiteID] = useState('')
 
     useEffect(() => {
         axios.get("http://localhost:5000/getAll").then((res) => {
@@ -15,17 +16,20 @@ const Website = () => {
           setCompanyName(res.data[res.data.length - 1].businessName)
           setPhoneNumber(res.data[res.data.length - 1].phoneNumber)
           setBusinessMission(res.data[res.data.length - 1].businessMission)
-          setBusinessDomain(res.data[res.data.length - 1].businessMission)
+          setBusinessDomain(res.data[res.data.length - 1].businessDomain)
+          setWebsiteID(res.data[res.data.length - 1]._id)
         });
       }, []);
-    return (
 
+    return (
         <div>
+            
             {businessType === 'food' ? <FoodIndustry
                 companyName = {companyName}
                 phoneNumber = {phoneNumber}
                 businessMission = {businessMission}
                 businessDomain = {businessDomain}
+                websiteID = {websiteID}
             /> : null }
         </div>
     )

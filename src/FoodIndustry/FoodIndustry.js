@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect} from "react";
+import axios from 'axios'
 import { GlobalProvider } from "../Context/GlobalState";
 
 import "./FoodIndustry.css";
@@ -9,6 +10,15 @@ import FoodDescription from "./FoodDescription/FoodDescription";
 import FoodMenu from "./FoodMenu/FoodMenu";
 
 const FoodIndustry = (props) => {
+  useEffect(() => {
+    axios.get(`http://localhost:5000/getForm/${props.websiteID}`)
+    .then(res => {
+      console.log(res.data[0])
+    })
+  })
+
+  console.log(props.websiteID)
+
   return (
     <GlobalProvider>
       <div className="foodDiv">

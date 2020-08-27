@@ -12,12 +12,6 @@ import "./Form.css";
 
 const BusinessForm = () => {
   const { session, addForm } = useContext(GlobalContext);
-  // useEffect(() => {
-  //   axios.get('http://localhost:5000/getAll')
-  //   .then(res => {
-  //     console.log(res.data[0])
-  //   })
-  // })
 
   const [businessName, setBusinessName] = useState("");
   const [businessDomain, setBusinessDomain] = useState("");
@@ -55,26 +49,13 @@ const BusinessForm = () => {
       phoneNumber,
       businessType,
       businessMission,
-      // user: session
+      user: session
     };
 
     axios.post("http://localhost:5000/addForm", newForm);
     addForm(newForm);
 
     window.location = "/loading";
-
-    // let typeofbusiness = businessType;
-
-    // switch (typeofbusiness) {
-    //   case "food":
-    //     window.location = "/foodIndustry";
-    //     break;
-    //   case "business":
-    //     window.location = "/businessIndustry";
-    //     break;
-    //   default:
-    //     window.location = "/";
-    // }
   };
 
   return (

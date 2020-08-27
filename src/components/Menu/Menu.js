@@ -11,13 +11,16 @@ const Menu = () => {
   useEffect(() => {
     axios.get("http://localhost:3000/getSession")
     .then((res) => {
-      const sessionData = {
-        firstName: res.data.user.firstName,
-        id: res.data.user._id,
-        email: res.data.user.email
+      if(res.data.user === "") {
+        window.location = ('/login')
+      } else {
+        const sessionData = {
+          firstName: res.data.user.firstName,
+          id: res.data.user._id,
+          email: res.data.user.email
+        }
+        getSession(sessionData)
       }
-
-      getSession(sessionData)
     });
   }, []);
 

@@ -1,16 +1,16 @@
 .foodMenu {
     width: 90%;
-    margin: 10% 0 0 0;
+    margin: 10% 0 0 5%;
 }
 
 .breakfast:hover{
-    filter: grayscale(150%);
+    filter: brightness(120%);
 }
 
 .lunch:hover{
-    filter: grayscale(150%);
+    filter: brightness(120%);
 }
 
 .dinner:hover{
-    filter: grayscale(150%);
+    filter: brightness(120%);
 }
